@@ -1,0 +1,34 @@
+{
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode-remote.remote-containers",
+                "eamodio.gitlens",
+                "ms-python.python"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": "true",
+            "installZsh": "true",
+            "upgradePackages": "true",
+            "userGid": "2000",
+            "userUid": "2000",
+            "username": "fs"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": "false",
+            "version": "latest"
+        },
+        "ghcr.io/mamba-org/devcontainer-features/micromamba:1": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "name": "Feedstocks",
+    "postCreateCommand": ".devcontainer/setup.sh",
+    "remoteUser": "fs",
+    "runArgs": [
+        "--privileged"
+    ]
+}
